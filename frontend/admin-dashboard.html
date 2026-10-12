@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | MediCare</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header" data-nav></header>
+<main class="dashboard-shell">
+  <aside class="sidebar">
+    <div class="side-title">Hospital admin</div>
+    <a class="side-link active" href="admin-dashboard.html">🏠 Dashboard</a>
+    <a class="side-link" href="doctors.html">👨 Doctors</a>
+    <a class="side-link" href="#appointments">📅 Appointments</a>
+    <a class="side-link" href="#departments">🏥 Departments</a>
+    <a class="side-link" href="#" data-logout>🔒 Logout</a>
+  </aside>
+  <section class="dash-content">
+    <div class="dash-top">
+      <div>
+        <div class="eyebrow">Hospital administration</div>
+        <h1>Good day, <span data-user-name>Admin</span></h1>
+        <p>One clear view of the hospital's daily operations.</p>
+      </div>
+      <a class="btn btn-primary" href="doctors.html">Manage doctors</a>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card"><span>Total doctors</span><strong data-stat-doctors>—</strong></div>
+      <div class="stat-card"><span>Total patients</span><strong data-stat-patients>—</strong></div>
+      <div class="stat-card"><span>Today's appointments</span><strong data-stat-today>—</strong></div>
+      <div class="stat-card"><span>Pending appointments</span><strong data-stat-pending>—</strong></div>
+    </div>
+    <div class="dash-panels">
+      <section class="panel" id="appointments">
+        <h2>All appointments</h2>
+        <div data-admin-appointments><div class="empty-state">Loading appointments...</div></div>
+      </section>
+      <section class="panel" id="departments">
+        <h2>Admin actions</h2>
+        <a class="btn btn-primary" href="doctors.html" style="display:block;margin-bottom:10px;text-align:center">View / Manage Doctors</a>
+        <a class="btn btn-outline" href="appointment.html" style="display:block;text-align:center">New Appointment</a>
+      </section>
+    </div>
+  </section>
+</main>
+<script src="js/app.js"></script>
+<script src="js/dashboard.js"></script>
+</body></html>

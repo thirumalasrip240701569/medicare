@@ -1,0 +1,10 @@
+const express = require('express');
+const Prescription = require('../models/Prescription');
+const MedicalRecord = require('../models/MedicalRecord');
+const { authenticateToken } = require('../middleware/auth');
+const router = express.Router();
+router.post('/prescriptions', authenticateToken, async (req, res) => res.status(201).json(await Prescription.create(req.body)));
+router.get('/prescriptions/:patientId', authenticateToken, async (req, res) => res.json(await Prescription.findAll({ where: { patientId: req.params.patientId } })));
+router.post('/medical-records', authenticateToken, async (req, res) => res.status(201).json(await MedicalRecord.create(req.body)));
+router.get('/medical-records/:patientId', authenticateToken, async (req, res) => res.json(await MedicalRecord.findAll({ where: { patientId: req.params.patientId } })));
+module.exports = router;

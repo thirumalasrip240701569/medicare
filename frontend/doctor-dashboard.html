@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Dashboard | MediCare</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header" data-nav></header>
+<main class="dashboard-shell">
+  <aside class="sidebar">
+    <div class="side-title">Clinical workspace</div>
+    <a class="side-link active" href="doctor-dashboard.html">🏠 Dashboard</a>
+    <a class="side-link" href="#appointments">📅 My Appointments</a>
+    <a class="side-link" href="doctors.html">👨 My Profile</a>
+    <a class="side-link" href="#" data-logout>🔒 Logout</a>
+  </aside>
+  <section class="dash-content">
+    <div class="dash-top">
+      <div>
+        <div class="eyebrow">Doctor dashboard</div>
+        <h1>Good day, <span data-doctor-name data-user-name>Doctor</span></h1>
+        <p>Keep today's patient care moving smoothly.</p>
+      </div>
+      <a class="btn btn-outline" href="index.html">View site</a>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card"><span>Today's appointments</span><strong data-stat-today>—</strong></div>
+      <div class="stat-card"><span>Upcoming appointments</span><strong data-stat-upcoming>—</strong></div>
+      <div class="stat-card"><span>Total appointments</span><strong data-stat-total>—</strong></div>
+      <div class="stat-card"><span>Completed visits</span><strong data-stat-completed>—</strong></div>
+    </div>
+    <section class="panel" id="appointments">
+      <h2>My appointments</h2>
+      <div data-doctor-appointments><div class="empty-state">Loading appointments...</div></div>
+    </section>
+  </section>
+</main>
+<script src="js/app.js"></script>
+<script src="js/dashboard.js"></script>
+</body></html>

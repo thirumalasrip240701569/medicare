@@ -1,0 +1,53 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receptionist Dashboard | MediCare</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header" data-nav></header>
+<main class="dashboard-shell">
+  <aside class="sidebar">
+    <div class="side-title">Front desk</div>
+    <a class="side-link active" href="receptionist-dashboard.html">🏠 Dashboard</a>
+    <a class="side-link" href="register.html">📝 Register Patient</a>
+    <a class="side-link" href="appointment.html">📅 Book Appointment</a>
+    <a class="side-link" href="#appointments">📋 Appointments</a>
+    <a class="side-link" href="doctors.html">🔍 Doctors</a>
+    <a class="side-link" href="#" data-logout>🔒 Logout</a>
+  </aside>
+  <section class="dash-content">
+    <div class="dash-top">
+      <div>
+        <div class="eyebrow">Front desk dashboard</div>
+        <h1>Good day, <span data-user-name>Receptionist</span></h1>
+        <p>Keep every hospital visit organized and welcoming.</p>
+      </div>
+      <a class="btn btn-primary" href="appointment.html">Book appointment</a>
+    </div>
+    <div class="stat-grid">
+      <div class="stat-card"><span>Today's appointments</span><strong data-stat-today>—</strong></div>
+      <div class="stat-card"><span>Available doctors</span><strong data-stat-doctors>—</strong></div>
+      <div class="stat-card"><span>Registered patients</span><strong data-stat-patients>—</strong></div>
+      <div class="stat-card"><span>Pending confirmations</span><strong data-stat-pending>—</strong></div>
+    </div>
+    <div class="dash-panels">
+      <section class="panel">
+        <h2>Quick actions</h2>
+        <div class="quick-grid" style="margin:0;grid-template-columns:repeat(3,1fr)">
+          <a class="quick-card" href="register.html"><h3>Register patient</h3><p>Create a patient record for a hospital visitor.</p></a>
+          <a class="quick-card" href="appointment.html"><h3>Book appointment</h3><p>Check availability and reserve a time.</p></a>
+          <a class="quick-card" href="doctors.html"><h3>Find doctor</h3><p>Review departments and doctor schedules.</p></a>
+        </div>
+      </section>
+      <section class="panel" id="appointments">
+        <h2>Recent appointments</h2>
+        <div data-admin-appointments><div class="empty-state">Loading appointments...</div></div>
+      </section>
+    </div>
+  </section>
+</main>
+<script src="js/app.js"></script>
+<script src="js/dashboard.js"></script>
+</body></html>
